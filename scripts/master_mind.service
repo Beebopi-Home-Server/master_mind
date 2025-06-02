@@ -3,7 +3,7 @@ Description=Serviço de controle remoto do servidor
 
 [Service]
 Type=simple
-ExecStart=/opt/master_mind/scripts/run.sh --local
+ExecStart=/opt/master_mind/scripts/run.sh --docker
 Restart=always
 RestartSec=5
 
