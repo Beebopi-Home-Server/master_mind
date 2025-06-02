@@ -13,7 +13,7 @@ sudo systemctl daemon-reload
 sudo apt install python3-gunicorn python3-fastapi
 
 # Dá as devidas permissões aos scripts de execução
-chmod +x ./scripts/run.sh
+sudo chmod +x ./scripts/run.sh
 
 # Considerações finais
 echo "Inicie/Ative o serviço master_mind.service"
