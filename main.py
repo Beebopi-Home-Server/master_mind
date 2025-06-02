@@ -44,7 +44,7 @@ def atualizar_servidor():
     Rota que executa o seu script de atualização (por exemplo: scripts/atualizar_servidor.sh).
     Retorna a saída padrão do script.
     """
-    caminho_script = "update.sh"
+    caminho_script = "/opt/Beebopi-Server/scripts/update.sh"
     saida = executar_comando([caminho_script])
     return {"mensagem": "Script de atualização executado.", "output": saida}
 
