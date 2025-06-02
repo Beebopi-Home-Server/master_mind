@@ -29,14 +29,14 @@ def executar_comando(cmd: list[str]) -> str:
             detail=f"Falha ao executar '{' '.join(cmd)}': {detalhes}"
         )
 
-@app.post("/reboot", summary="Reinicia o servidor")
-def reboot_servidor():
-    """
-    Rota que reinicia o servidor.
-    Retorna a saída padrão ou mensagem de confirmação.
-    """
-    saida = executar_comando(["sudo", "systemctl", "reboot"])
-    return {"mensagem": "Comando de reboot enviado.", "output": saida}
+# @app.post("/reboot", summary="Reinicia o servidor")
+# def reboot_servidor():
+#     """
+#     Rota que reinicia o servidor.
+#     Retorna a saída padrão ou mensagem de confirmação.
+#     """
+#     saida = executar_comando(["sudo", "systemctl", "reboot"])
+#     return {"mensagem": "Comando de reboot enviado.", "output": saida}
 
 @app.post("/update", summary="Atualiza o servidor")
 def atualizar_servidor():
@@ -44,9 +44,8 @@ def atualizar_servidor():
     Rota que executa o seu script de atualização (por exemplo: scripts/atualizar_servidor.sh).
     Retorna a saída padrão do script.
     """
-    # Substitua abaixo pelo caminho real do seu script
     caminho_script = "update.sh"
-    saida = executar_comando(["sudo", caminho_script])
+    saida = executar_comando([caminho_script])
     return {"mensagem": "Script de atualização executado.", "output": saida}
 
 @app.get("/status", summary="Checa se a API está online")

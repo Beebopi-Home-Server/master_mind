@@ -1,0 +1,11 @@
+[Unit]
+Description=Serviço de controle remoto do servidor
+
+[Service]
+Type=simple
+ExecStart=/opt/master_mind/scripts/run.sh --local
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
