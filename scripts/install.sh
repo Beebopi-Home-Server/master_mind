@@ -9,8 +9,8 @@ cd /opt/master_mind
 sudo cp /opt/master_mind/scripts/master_mind.service /lib/systemd/system/
 sudo systemctl daemon-reload
 
-# Instala as dependências python
-pip install -r requirements.txt
+# [Debian] Instala as dependências python 
+sudo apt install python3-gunicorn python3-fastpi
 
 # Dá as devidas permissões aos scripts de execução
 chmod +x ./scripts/run.sh
