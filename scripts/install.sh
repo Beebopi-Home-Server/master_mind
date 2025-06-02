@@ -11,7 +11,7 @@ sudo systemctl daemon-reload
 
 # Instala as dependências python 
 sudo python -m venv .venv
-.venv/bin/pip install -r requirements.txt
+sudo .venv/bin/pip install -r requirements.txt
 
 # Dá as devidas permissões aos scripts de execução
 sudo chmod +x ./scripts/run.sh
